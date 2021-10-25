@@ -6,9 +6,9 @@ import { Sequelize } from 'sequelize';
 const app = express();
 const port = 42069;
 
-app.get('/', (req, res) => {
-  fetcher();
-  res.send('send');
+app.get('/', async (req, res) => {
+  let response = await fetcher();
+  res.send(response);
 });
 
 app.listen(port, () => {
