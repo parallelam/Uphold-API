@@ -8,6 +8,6 @@ app.get('/', async (req, res) => {
   res.send(response);
 });
 
-app.listen('42069', () => {
+app.listen(process.env.PORT || '42069', () => {
   console.log(`Chill app listening at http://localhost:42069, nice.`);
 });
